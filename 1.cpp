@@ -10,13 +10,13 @@ int main(){
 	for(i=1;i<=n;i++)
 	cin>>w[i]>>z[i];
 	for(i=1;i<=n;i++)
-	for(j=m;j>w[i];j--)
-	{
-		if(f[j]<f[j-w[i]]+w[i]*z[i])
+		for(j=m;j>w[i];j--)
 		{
-			f[j]=f[j-w[i]]+w[i]*z[i];
+			if(f[j]<f[j-w[i]]+w[i]*z[i])
+			{
+				f[j]=f[j-w[i]]+w[i]*z[i];
+			}
 		}
-	}
 	cout<<f[m];
 	return 0;
 }
